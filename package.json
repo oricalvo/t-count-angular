@@ -1,6 +1,6 @@
 {
   "name": "t-count-angular",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "description": "",
   "main": "t-count-angular.umd.js",
   "module": "t-count-angular.es5.js",
@@ -14,9 +14,9 @@
   "dependencies": {
     "@angular/core": "^4.2.4",
     "@angular/http": "^4.2.4",
-    "complog": "^1.0.9",
+    "complog": "^2.0.3",
     "rxjs": "^5.4.2",
-    "t-count": "^1.0.6",
+    "t-count": "^1.0.12",
     "tslib": "^1.7.0",
     "zone.js": "^0.8.10"
   },

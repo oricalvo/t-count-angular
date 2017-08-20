@@ -31,7 +31,9 @@ export class CounterXHR extends Counter {
                 //  loadstart is raised just before HTTP request is sent
                 //
                 me.ngZone.runOutsideAngular(()=> {
-                    xhr.addEventListener("loadstart", onLoadStart);
+                    xhr["profiler_send"] = performance.now();
+
+                    //xhr.addEventListener("loadstart", onLoadStart);
                     xhr.addEventListener("readystatechange", onReadyStateChange);
                 });
             }
@@ -44,7 +46,7 @@ export class CounterXHR extends Counter {
         function onReadyStateChange(this: XMLHttpRequest) {
             const xhr = this;
 
-            if(xhr.readyState == 2) {
+            if(xhr.readyState == 4) {
                 const before = (<any>xhr)["profiler_send"];
                 if (before) {
                     const after = performance.now();
@@ -53,11 +55,11 @@ export class CounterXHR extends Counter {
             }
         }
 
-        function onLoadStart(this: XMLHttpRequest) {
-            const xhr = <any>this;
-
-            xhr["profiler_send"] = performance.now();
-        }
+        // function onLoadStart(this: XMLHttpRequest) {
+        //     const xhr = <any>this;
+        //
+        //     xhr["profiler_send"] = performance.now();
+        // }
 
         return [this];
     }

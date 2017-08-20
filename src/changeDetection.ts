@@ -6,7 +6,7 @@ export class CounterChangeDetection extends Counter {
         super("Change Detection")
     }
 
-    patchAngular(applicationRef: ApplicationRef, ngZone: NgZone) {
+    init(applicationRef: ApplicationRef, ngZone: NgZone) {
         ngZone.runOutsideAngular(() => {
             this.profile(applicationRef, "tick");
         });

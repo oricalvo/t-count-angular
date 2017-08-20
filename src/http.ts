@@ -7,7 +7,7 @@ export class CounterHttp extends Counter {
         super("angular.Http");
     }
 
-    patchAngular(http: Http, ngZone: NgZone) {
+    init(http: Http, ngZone: NgZone) {
         const me = this;
 
         ngZone.runOutsideAngular(() => {
