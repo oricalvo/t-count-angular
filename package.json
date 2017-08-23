@@ -1,6 +1,6 @@
 {
   "name": "t-count-angular",
-  "version": "1.0.11",
+  "version": "1.0.14",
   "description": "",
   "main": "t-count-angular.umd.js",
   "module": "t-count-angular.es5.js",

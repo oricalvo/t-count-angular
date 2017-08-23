@@ -4,7 +4,7 @@ import {NgZone} from "@angular/core";
 
 export class CounterHttp extends Counter {
     constructor() {
-        super("angular.Http");
+        super("Http");
     }
 
     init(http: Http, ngZone: NgZone) {
